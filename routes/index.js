@@ -18,6 +18,7 @@ exports = module.exports = function (app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
+	app.get('/products/:product', routes.views.product);  //:product ist placeholder, getting this from req.params.product, wenn es id heissen würde, müsste man req.params.id schreiben
 	app.get('/products', routes.views.products);
 	app.all('/contact', routes.views.contact);
 
